@@ -1,2 +1,2 @@
-# web
-Kontorportalen Home page
+# Kontorportalen
+Dette er GIT-repository for Kontorportalens hjemmeside
