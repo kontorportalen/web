@@ -13,21 +13,99 @@
 <body>
 
     <header class="sticky top-0 w-full text-gray-600 bg-white shadow-md z-1">
-        <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
-            <!-- Logo -->
-            <a class="mb-4 font-medium cursor-pointer" href="index.html">
-                <img src="./images/logo_kp_SvartHvit.png" alt="Kontorportalens logo. Bilde (KP)" class="h-6 hover:h-8">
-            </a>
-            <!-- Meny -->
-            <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto" aria-label="Global">
-                <a href="#websider" class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">Websider</a>
-                <a href="#elaring" class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">E-l&aelig;ring</a>
-                <a href="#events"
-                    class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">Event/m&oslash;ter</a>
-                <a href="#pris" class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">Pris</a>
-                <a href="#kontakt" class="cursor-pointer hover:text-black">Kontakt oss</a>
-            </nav>
-        </div>
+
+        <nav class="bg-indigo-600">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu -->
+                        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">&Aring;pne meny</span>
+            <!--
+              Icon when menu is closed. Heroicon name: outline/menu
+              Menu open: "hidden", Menu closed: "block"
+            -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                        stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+            <!--
+              Icon when menu is open. Heroicon name: outline/x
+              Menu open: "block", Menu closed: "hidden"
+            -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+                        stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        </button>
+                    </div>
+
+                    <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex-shrink-0 flex items-center">
+                            <img class="block lg:hidden h-8 w-auto" src="images/logo_kp_letters_SvartHvit.png" alt="KP">
+                            <img class="hidden lg:block h-8 w-auto" src="images/logo_kp_SvartHvit.png" alt="Kontorportalen">
+                        </div>
+                        <div class="hidden sm:block sm:ml-6">
+                            <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", 
+                            Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="./index.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Forside</a>
+                                <a href="./websider.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Websider</a>
+                                <a href="#event" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Event/arrangement</a>
+                                <a href="#elaring" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">E-l&aelig;ring</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <span class="sr-only">Vis varsel</span>
+                            <!-- Heroicon name: outline/bell -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </button>
+  
+                        <!-- Profile dropdown -->
+                        <div class="ml-3 relative">
+                            <div>
+                                <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="sr-only">&Aring;pne brukermeny</span>
+                                    <img class="h-8 w-8 rounded-full" 
+                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                </button>
+                            </div>
+  
+                            <!--
+                            Dropdown menu, show/hide based on menu state.
+  
+                            Entering: "transition ease-out duration-100"
+                            From: "transform opacity-0 scale-95"  To: "transform opacity-100 scale-100"
+                            Leaving: "transition ease-in duration-75" 
+                            From: "transform opacity-100 scale-100"  To: "transform opacity-0 scale-95"
+                            -->
+                            <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                                <!-- Active: "bg-gray-100", Not Active: "" -->
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Din profil</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Innstillinger</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Logg ut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Forside</a>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <section class="flex flex-col justify-between my-10 bg-white md:h-screen md:flex-row" id="hero">
@@ -179,7 +257,7 @@
             </div>
 
             <!-- PORTFOLIO -->
-            <div class="grid w-full grid-cols-1 gap-1 py-16 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="grid w-full grid-cols-1 gap-1 py-16 sm:grid-cols-2 lg:grid-cols-4 z-20">
                 <!-- NAFWeb -->
                 <div id="nafweb"
                     class="w-full p-4 mx-2 transform bg-white border border-gray-200 rounded shadow hover:shadow-lg hover:-translate-x-1">
@@ -241,8 +319,7 @@
                 </p>
                 <p class="max-w-3xl my-4 text-xl text-gray-500 lg:mx-auto">
                     Mange organisasjoner og bedrifter trenger en form for e-l&aelig;ringssystem og/eller
-                    sertifiseringssystem.
-                    Kontorportalen kan tilby dette, enten som l&oslash;sning bygget hos oss
+                    sertifiseringssystem. Kontorportalen kan tilby dette, enten som l&oslash;sning bygget hos oss
                     (kontorportalen.no/lms/&lt;din konto&gt;) eller p&aring; deres servere.
                 </p>
                 <!-- COMING SOON
@@ -259,9 +336,9 @@
     <section id="events" class="w-full py-20 bg-gray-100">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="mb-8 md:text-center">
-                <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Events og m&oslash;ter</h2>
+                <h2 class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Billettsystem</h2>
                 <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-                    Organisering av dine arrangementer
+                    Billettsalg til dine arrangementer
                 </p>
                 <p class="max-w-3xl my-4 text-xl text-gray-500 lg:mx-auto">
                     Kontorportalen drifter egen side for salg av billetter til ulike arrangementer, <span
@@ -340,8 +417,8 @@
                         <!-- Col 1 -->
                         <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
                             <p
-                                class="mt-2 text-lg font-medium text-gray-600 text-normal sm:text-2xl dark:text-gray-400">
-                                Send inn skjemaet for &aring; komme i kontakt med oss:
+                                class="mt-2 text-lg font-medium text-gray-600 sm:text-xl dark:text-gray-400">
+                                Send inn skjemaet for &aring; komme i kontakt med oss
                             </p>
 
                             <div class="flex items-center mt-8 text-gray-600 dark:text-gray-400">
@@ -354,7 +431,7 @@
                                 </svg>
                                 Postadresse:
                                 <address class="ml-4 font-semibold tracking-wide text-md">
-                                    Lektor Musums gt 17, 7650 Verdal
+                                    Lektor Musums gt 17, N-7650 Verdal
                                 </address>
                             </div>
 
@@ -364,7 +441,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
-                                <div class="w-40 ml-4 font-semibold tracking-wide text-md">post@kontorportalen.no</div>
+                                <div class="w-40 ml-4 font-semibold italic tracking-wide text-md">post@kontorportalen.no</div>
                             </div>
 
                             <!-- Google maps -->
@@ -383,7 +460,7 @@
                             action="https://formsubmit.co/2ac060a099e8979ac0f7824ff6e01430" method="POST">
                             <div class="flex flex-col">
                                 <label for="name">Fullt navn</label>
-                                <input type="name" name="name" id="name" placeholder="Fullt navn"
+                                <input type="text" name="name" id="name" placeholder="Fullt navn"
                                     class="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none">
                             </div>
 
@@ -396,13 +473,13 @@
                             <div class="flex flex-col mt-2">
                                 <label for="message">Din melding</label>
                                 <textarea name="message" id="message"
-                                    class="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none">
+                                    class="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 h-40 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none">
                                 </textarea>
                             </div>
 
                             <button type="submit"
-                                class="px-6 py-3 mt-3 font-bold text-white transition duration-300 ease-in-out bg-indigo-600 rounded-lg md:w-32 hover:bg-blue-dark hover:bg-indigo-500">
-                                Send
+                                class="px-6 py-3 mt-3 font-bold text-white transition duration-300 ease-in-out bg-indigo-600 rounded-lg md:w-40 hover:bg-blue-dark hover:bg-indigo-500">
+                                Send melding
                             </button>
                         </form>
                     </div>
@@ -412,7 +489,7 @@
     </section>
 
 
-
+    <!-- FOOTER -->
     <footer class="bg-gray-800 sm:mt-10">
         <div class="flex flex-wrap max-w-6xl m-auto text-gray-800 justify-left">
 
@@ -496,7 +573,7 @@
             <div class="pt-2">
                 <div
                     class="flex flex-col max-w-6xl px-3 pt-5 pb-5 m-auto text-sm text-gray-400 border-t border-gray-500 md:flex-row">
-                    <span class="mt-2">&copy Kontorportalen 2021. All Rights Reserved.</span>
+                    <span class="mt-2">&copy Kontorportalen 2022. All Rights Reserved.</span>
                 </div>
             </div>
         </div>
