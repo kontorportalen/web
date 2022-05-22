@@ -12,89 +12,31 @@
 
 <body>
 
-    <header class="sticky top-0 w-full text-gray-600 bg-white shadow-md z-1">
+    <header class="top-0 w-full text-gray-600 bg-white shadow-md z-1">
+        <div class="container">
 
-        <nav class="bg-indigo-600">
-            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                <div class="relative flex items-center justify-between h-16">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu -->
-                        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">&Aring;pne meny</span>
-            <!--
-              Icon when menu is closed. Heroicon name: outline/menu
-              Menu open: "hidden", Menu closed: "block"
-            -->
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
-                        stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-            <!--
-              Icon when menu is open. Heroicon name: outline/x
-              Menu open: "block", Menu closed: "hidden"
-            -->
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
-                        stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        </button>
-                    </div>
-
-                    <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                        <div class="flex-shrink-0 flex items-center">
-                            <img class="block lg:hidden h-8 w-auto" src="images/logo_kp_letters_SvartHvit.png" alt="KP">
-                            <img class="hidden lg:block h-8 w-auto" src="images/logo_kp_SvartHvit.png" alt="Kontorportalen">
-                        </div>
-                        <div class="hidden sm:block sm:ml-6">
-                            <div class="flex space-x-4">
-                            <!-- Current: "bg-gray-900 text-white", 
-                            Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="./index.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Forside</a>
-                                <a href="./websider.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Websider</a>
-                                <a href="#event" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Event/arrangement</a>
-                                <a href="#elaring" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">E-l&aelig;ring</a>
-                            </div>
-                        </div>
-                    </div>
+        <nav class="flex items-center justify-between flex-wrap bg-indigo-600 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <a href="/"><img src="images/logo_kp_SvartHvit.png" alt="Kontorportalen logo"></a>
+            </div>
             
-                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                            <span class="sr-only">Vis varsel</span>
-                            <!-- Heroicon name: outline/bell -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                            </svg>
-                        </button>
-  
-                        <!-- Profile dropdown -->
-                        <div class="ml-3 relative">
-                            <div>
-                                <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                                    <span class="sr-only">&Aring;pne brukermeny</span>
-                                    <img class="h-8 w-8 rounded-full" 
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                                </button>
-                            </div>
-  
-                            <!--
-                            Dropdown menu, show/hide based on menu state.
-  
-                            Entering: "transition ease-out duration-100"
-                            From: "transform opacity-0 scale-95"  To: "transform opacity-100 scale-100"
-                            Leaving: "transition ease-in duration-75" 
-                            From: "transform opacity-100 scale-100"  To: "transform opacity-0 scale-95"
-                            -->
-                            <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                                <!-- Active: "bg-gray-100", Not Active: "" -->
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Din profil</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Innstillinger</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Logg ut</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="block lg:hidden">
+              <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Meny</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="w-full ml-8 block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="./websider.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Websider</a>
+                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">E-læring</a>
+                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Billettsystem</a>
                 </div>
             </div>
-  
+
             <!-- Mobile menu, show/hide based on menu state. -->
             <div class="sm:hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
@@ -106,6 +48,7 @@
                 </div>
             </div>
         </nav>
+        </div>
     </header>
 
     <section class="flex flex-col justify-between my-10 bg-white md:h-screen md:flex-row" id="hero">
@@ -248,61 +191,71 @@
                     Noen av de sidene vi har bygd eller v&aelig;rt konsulent til, ser du nedenfor.
                 </p>
 
-                <a href="websider.html"
+                <a href="./websider.html"
                     class="flex items-center justify-center w-full px-8 py-3 mx-auto mt-12 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md sm:w-1/4 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                    Les om prosessen
+                    Les mer om prosessen
                 </a>
             </div>
 
             <!-- PORTFOLIO -->
             <div class="grid w-full grid-cols-1 gap-1 py-16 sm:grid-cols-2 lg:grid-cols-4 z-20">
+
                 <!-- NAFWeb -->
+                <a href="https://www.nafweb.no/" target="_blank">
                 <div id="nafweb"
-                    class="w-full p-4 mx-2 transform bg-white border border-gray-200 rounded shadow hover:shadow-lg hover:-translate-x-1">
+                    class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
                     <div>
                         <img src="images/nafweb.png" alt="Norsk anestesiologisk forening. Portfoliobilde">
                     </div>
                     <div class="text-center">
                         <span class="font-semibold">Norsk anestesiologisk forening</span><br />
-                        <a href="https://www.nafweb.no/" target="_blank">www.nafweb.no</a>
+                        <em class="font-light">www.nafweb.no</em>
                     </div>
                 </div>
+                </a>
 
                 <!-- Simulatorsenteret -->
+                <a href="https://www.simulatorsenteret.no/" target="_blank">
                 <div id="simulatorsenteret"
-                    class="w-full p-4 mx-2 transform bg-white border border-gray-200 rounded shadow hover:shadow-lg hover:-translate-x-1">
+                    class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
                     <div>
                         <img src="images/simulatorsenteret.png" alt="Medisinsk Simulatorsenter. Portfoliobilde">
                     </div>
                     <div class="text-center">
                         <span class="font-semibold">Medisinsk Simulatorsenter</span><br />
-                        <a href="https://www.simulatorsenteret.no/" target="_blank">www.simulatorsenteret.no</a>
+                        <em class="font-light">www.simulatorsenteret.no</em>
                     </div>
                 </div>
+                </a>
 
                 <!-- Medsimnorge -->
+                <a href="https://www.medsimnorge.no/" target="_blank">
                 <div id="medsimnorge"
-                    class="w-full p-4 mx-2 transform bg-white border border-gray-200 rounded shadow hover:shadow-lg hover:-translate-x-1">
+                    class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
                     <div>
                         <img src="images/medsimnorge.png" alt="MedSimNorge. Portfoliobilde">
                     </div>
                     <div class="text-center">
                         <span class="font-semibold">MedSimNorge</span><br />
-                        <a href="https://www.medsimnorge.no/" target="_blank">www.medsimnorge.no</a>
+                        <em class="font-light">www.medsimnorge.no</em>
                     </div>
                 </div>
+                </a>
 
                 <!-- Spelet -->
+                <a href="https://www.spelet.no/" target="_blank">
                 <div id="spelet"
-                    class="w-full p-4 mx-2 transform bg-white border border-gray-200 rounded shadow hover:shadow-lg hover:-translate-x-1">
+                    class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
                     <div>
                         <img src="images/spelet.png" alt="Spelet om Heilag Olav. Portfoliobilde">
                     </div>
                     <div class="text-center">
                         <span class="font-semibold">Spelet om Heilag Olav (frivillige)</span><br />
-                        <a href="https://www.spelet.no/" target="_blank">www.spelet.no</a>
+                        <em class="font-light">www.spelet.no</em>
                     </div>
                 </div>
+                </a>
+
             </div>
         </div>
     </section>
@@ -318,7 +271,11 @@
                 <p class="max-w-3xl my-4 text-xl text-gray-500 lg:mx-auto">
                     Mange organisasjoner og bedrifter trenger en form for e-l&aelig;ringssystem og/eller
                     sertifiseringssystem. Kontorportalen kan tilby dette, enten som l&oslash;sning bygget hos oss
-                    (kontorportalen.no/lms/&lt;din konto&gt;) eller p&aring; deres servere.
+                    (kontorportalen.no/lms/&lt;din konto&gt;) eller p&aring; deres egne servere.
+                </p>
+                <p class="max-w-3xl my-4 text-xl text-gray-500 lg:mx-auto">E-læringssystemer er altså ikke begrenset til utdanningsinstitusjoner eller til nettsteder som driver 
+                    med e-læring som eneste aktivitet. Mange bedrifter, organisasjoner og lag bruker e-læring i større og mindre
+                    grad. Hvis du tror at dette kan være noe for dette, er det bare å ta kontakt!
                 </p>
                 <!-- COMING SOON
                 <a href="elaring.html"
@@ -374,11 +331,12 @@
             <div class="w-full my-8 border border-gray-300 shadow">
                 <h2 class="pt-4 pl-4 text-xl font-medium">E-l&aelig;ring p&aring; Kontorportalen</h2>
                 <p class="py-4 pl-4">
-                    Oppstart og lagringsplass for ditt e-l&aelig;ringssystem hos Kontorportalen koster <em
+                    Selve lagringsplass for ditt e-l&aelig;ringssystem hos Kontorportalen koster <em
                         class="font-semibold">kun kr 80,- pr mnd</em>!
                     I tillegg kommer oppsett av l&aelig;ringssystemet hvis dere &oslash;nsker det, vanligvis ligger
                     dette mellom kr 5000,- og kr 10000,-.
-                    Dersom du velger lagringsplass hos oss, er det 15% rabatt p&aring; oppsett av e-l&aelig;ringssystem.
+                    Dersom du velger lagringsplass hos oss, 
+                    får du <strong class="font-semibold">15% rabatt</strong> p&aring; oppsett av e-l&aelig;ringssystem.
                 </p>
             </div>
 
@@ -571,7 +529,7 @@
             <div class="pt-2">
                 <div
                     class="flex flex-col max-w-6xl px-3 pt-5 pb-5 m-auto text-sm text-gray-400 border-t border-gray-500 md:flex-row">
-                    <span class="mt-2">&copy Kontorportalen 2022. All Rights Reserved.</span>
+                    <span class="mt-2">&copy; Kontorportalen 2022. All Rights Reserved.</span>
                 </div>
             </div>
         </div>

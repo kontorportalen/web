@@ -12,21 +12,43 @@
 
 <body>
 
-    <header class="sticky top-0 w-full text-gray-600 bg-white shadow-md z-1">
-        <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
-            <!-- Logo -->
-            <a class="mb-4 font-medium cursor-pointer" href="index.html">
-                <img src="./images/logo_kp_SvartHvit.png" alt="Kontorportalen" class="h-6 hover:h-8">
-            </a>
-            <!-- Meny -->
-            <nav class="flex flex-wrap items-center justify-center text-base md:ml-auto" aria-label="Global">
-                <a href="#websider" class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">Websider</a>
-                <a href="#elaring" class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">E-l&aelig;ring</a>
-                <a href="#events"
-                    class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">Event/m&oslash;ter</a>
-                <a href="#pris" class="mr-5 cursor-pointer hover:font-extrabold hover:text-black">Pris</a>
-                <a href="#kontakt" class="cursor-pointer hover:text-black">Kontakt oss</a>
-            </nav>
+    <header class="top-0 w-full text-gray-600 bg-white shadow-md z-1">
+        <div class="container">
+
+        <nav class="flex items-center justify-between flex-wrap bg-indigo-600 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+              <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+              <span class="font-semibold text-xl tracking-tight">Kontorportalen</span>
+            </div>
+            
+            <div class="block lg:hidden">
+              <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Meny</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="w-full ml-8 block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+                    <a href="./websider.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Websider</a>
+                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">E-læring</a>
+                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Billettsystem</a>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Forside</a>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+                </div>
+            </div>
+        </nav>
         </div>
     </header>
 
@@ -48,7 +70,7 @@
                     N&aring;r man skal bygge en ny side, m&aring; man ha <span class="font-bold">brukervennlighet</span> i fokus. 
                     Brukervennlighet handler om bruk av tekst og bilder, skrifttype, lesbarhet og mye mer.<br /> 
                     Til grunn for v&aring;r bygging av nettsider, ligger et noks&aring; stort dokument som kalles 
-                    <a href="https://www.uutilsynet.no/wcag-standarden/wcag-20-standarden/86" class="underline underline-dark-400 hover:font-extrabold" target="_blank">WCAG 2.0 - Web Content Accessibility Guidelines</a>.
+                    <a href="https://www.uutilsynet.no/wcag-standarden/wcag-20-standarden/86" class="underline underline-dark-400 hover:text-blue-400" target="_blank">WCAG 2.0 - Web Content Accessibility Guidelines</a>.
                     Dokumentet handler om universell utforming, og det stilles krav til at alle (nye) nettsider fra private, lag, foreninger og offentlige skal tilfredsstille minst 35 av 61 suksesskriterier i denne standarden.
                 </p>
 
@@ -94,6 +116,12 @@
                     Som ledd i prosessen, er det viktig med fokus p&aring; hvem som er m&aring;lgruppen for din nettside. Dette er viktig n&aring;r man vurderer hvilken
                     informasjon som presenteres, hvordan det presenteres, grad av interaktivitet og andre, brukerassosierte sp&oslash;rsm&aring;l.
                 </p>
+
+                <p class="my-4 text-xl text-gray-500 lg:mx-auto">
+                    Ditt firma, lag eller organisasjon b&oslash;r bruke god tid p&aring; akkurat denne delen av reisen. 
+                    Sp&oslash;rsm&aring;let er alts&aring;: Hvem er det som er den prim&aelig;re m&aring;lgruppen for nettsiden? 
+                    Hvilken informasjon &oslash;nsker dere at brukeren skal f&aring;? Hvilken informasjon tror dere brukeren er ute etter?
+                </p>
             </div>
 
 
@@ -104,15 +132,16 @@
 
             <div class="px-4 max-w-7xl sm:px-6 lg:px-8">
                 <p class="my-4 text-xl text-gray-500 lg:mx-auto">
-                    Det er f&oslash;rst n&aring;r del 1 og 2 er godt i gang at vi begynner &aring; bygge nettsiden. Det er fordi man skal unng&aring; ommbygg som skyldes manglende
-                    informasjon eller kommunikasjon. Du som kunde vil f&aring; presentert et utkast til bygg noks&aring; raskt, der man ser p&aring; det rent praktiske med menybygging 
-                    og hvordan nettstedets oppbygging skal v&aelig;re. N&aring;r vi er enige om utkastet, vil det bli bygget ferdig og produksjonssatt!
+                    Det er f&oslash;rst n&aring;r del 1 og 2 er nesten fullf&oslash;rt at vi begynner &aring; bygge selve nettsiden. 
+                    Utgangspunktet er &aring; unng&aring; ombygg som skyldes manglende informasjon eller kommunikasjon. 
+                    Du som kunde vil f&aring; presentert et utkast til bygg noks&aring; raskt, 
+                    der man ser p&aring; det rent praktiske med menybygging og hvordan nettstedets oppbygging skal v&aelig;re. 
+                    N&aring;r vi er enige om utkastet, vil det bli bygget ferdig og produksjonssatt!
                 </p>
             </div>
         </div>
 
     </section>
-
 
 
 
@@ -233,18 +262,18 @@
                 <div class="mb-6 text-xs font-medium text-gray-400 uppercase">Navigasjon</div>
 
                 <!-- Meny -->
-                <a href="#websider"
+                <a href="/"
                     class="block my-3 text-sm font-medium text-gray-300 duration-700 hover:text-gray-100">
-                    Websider
+                    Hjem
                 </a>
-                <a href="#elaring"
+                <a href="/#elaring"
                     class="block my-3 text-sm font-medium text-gray-300 duration-700 hover:text-gray-100">
                     E-l&aelig;ring
                 </a>
-                <a href="#events" class="block my-3 text-sm font-medium text-gray-300 duration-700 hover:text-gray-100">
-                    Event
+                <a href="/#events" class="block my-3 text-sm font-medium text-gray-300 duration-700 hover:text-gray-100">
+                    Billettsystem
                 </a>
-                <a href="#pris" class="block my-3 text-sm font-medium text-gray-300 duration-700 hover:text-gray-100">
+                <a href="/#pris" class="block my-3 text-sm font-medium text-gray-300 duration-700 hover:text-gray-100">
                     Pris
                 </a>
             </div>
