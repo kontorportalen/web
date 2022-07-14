@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build -i ./src/css/tailwind.css -o ./pulic/css/kp_styles.css"
+    "build": "tailwindcss build -i ./src/css/tailwind.css -o ./public/css/kp_styles.css"
   },
   "keywords": [],
   "author": "",
