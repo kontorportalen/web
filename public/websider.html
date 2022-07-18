@@ -27,7 +27,7 @@
                                 </a>
                             </div>
                             <!-- Primary Navbar items -->
-                            <div class="hidden md:flex items-center space-x-1">
+                            <div class="hidden md:flex items-center space-x-1" role="list">
                                 <a href="index.html" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Hjem</a>
                                 <a href="websider.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Websider</a>
                                 <a href="index.html#events" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Billettformidling</a>
@@ -52,8 +52,8 @@
                 <!-- mobile menu -->
                 <div class="hidden mobile-menu">
                     <ul class="">
-                        <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Hjem</a></li>
-                        <li><a href="websider.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Websider</a></li>
+                        <li><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Hjem</a></li>
+                        <li class="active"><a href="websider.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Websider</a></li>
                         <li><a href="index.html#events" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Billettformidling</a></li>
                         <li><a href="index.html#elaring" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">E-læring</a></li>
                     </ul>
@@ -63,7 +63,7 @@
     </header>
 
     <!-- Prosessen -->
-    <section class="py-20 bg-white z-5" id="samarbeidspartner">
+    <section class="py-20 bg-white z-5" id="prosessen" aria-label="Om prosessen">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="lg:text-center">
                 <p class="text-base font-semibold tracking-wide text-indigo-600 uppercase">Om prosessen</p>
@@ -155,7 +155,7 @@
 
 
     <!-- KONTAKT OSS -->
-    <section id="kontakt" class="w-full py-20 bg-gray-100">
+    <section id="kontakt" class="w-full py-20 bg-gray-100" aria-label="Kontakt oss">
 
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="lg:text-center">
@@ -241,7 +241,6 @@
             </div>
         </div>
     </section>
-
 
 
     <footer class="bg-gray-800 sm:mt-10">

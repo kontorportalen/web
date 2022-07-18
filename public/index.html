@@ -12,54 +12,50 @@
 
 <body>
 
-    <header class="top-0 w-full text-gray-600 bg-white shadow-md z-1">
-        <div class="container">
+    <header class="top-0 w-full text-gray-600 bg-white shadow-md">
 
-            <nav class="bg-white shadow-lg">
-                <div class="max-w-6xl mx-auto px-4">
-                    <div class="flex justify-between">
-                        <div class="flex space-x-7">
-                            <div>
-                                <!-- Website Logo -->
-                                <a href="index.html" class="flex items-center py-4 px-2">
-                                    <img src="images/logo_kp_SvartHvit.png" alt="Kontorportalen logo" class="h-8 w-44 mr-2">
-                                    <span class="font-semibold text-gray-500 text-lg sr-only">Kontorportalens meny</span>
-                                </a>
-                            </div>
-                            <!-- Primary Navbar items -->
-                            <div class="hidden md:flex items-center space-x-1">
-                                <a href="index.html" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Hjem</a>
-                                <a href="websider.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Websider</a>
-                                <a href="index.html#events" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Billettformidling</a>
-                                <a href="index.html#elaring" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">E-læring</a>
-                            </div>
-                        </div>
+            <nav class="bg-white shadow-lg max-w-7xl content-center mx-auto">
+                <div class="flex justify-between">
+                    <div class="logo">
+                        <!-- Website Logo -->
+                        <a href="index.html" class="flex items-center py-4 px-2" aria-label="Kontorportalen hjem">
+                            <img src="images/logo_kp_SvartHvit.png" alt="" class="h-8 w-44 mr-2">
+                        </a>
+                    </div>
 
-                        <!-- Mobile menu button -->
-                        <div class="md:hidden flex items-center">
-                            <button class="outline-none mobile-menu-button">
-                                <svg class="w-6 h-6 text-gray-500 hover:text-green-500"
-                                    x-show="!showMenu" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path d="M4 6h16M4 12h16M4 18h16"></path>
-                                </svg>
-                            </button>
-                        </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1" role="list">
+                        <a href="index.html" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Hjem</a>
+                        <a href="websider.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Websider</a>
+                        <a href="index.html#events" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Billettformidling</a>
+                        <a href="index.html#elaring" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">E-læring</a>
                     </div>
                 </div>
-                <!-- mobile menu -->
-                <div class="hidden mobile-menu">
-                    <ul class="">
-                        <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Hjem</a></li>
-                        <li><a href="websider.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Websider</a></li>
-                        <li><a href="index.html#events" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Billettformidling</a></li>
-                        <li><a href="index.html#elaring" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">E-læring</a></li>
-                    </ul>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-green-500"
+                            x-show="!showMenu" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
-            </nav>
-        </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="hidden mobile-menu">
+                <ul class="">
+                    <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Hjem</a></li>
+                    <li><a href="websider.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Websider</a></li>
+                    <li><a href="index.html#events" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Billettformidling</a></li>
+                    <li><a href="index.html#elaring" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">E-læring</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -179,8 +175,8 @@
                                 <p class="ml-16 text-lg font-medium leading-6 text-gray-900">Fokus p&aring; det vi kan</p>
                             </dt>
                             <dd class="mt-2 ml-16 text-base text-gray-500">
-                                Vi kan Innenfor eget firma kan vi ikke hjelpe deg med alt, men vi vet hva vi ikke kan.
-                                Derfor fokuserer vi p&aring; noen kompetanseomr&aring;der,
+                                Vi kan ikke hjelpe deg med alt i vårt eget firma, men vi vet hva vi ikke kan.
+                                Vi velger å fokusere på vår styrke, som er bygging av gode websider,
                                 og s&aring; bruker vi tjenester fra andre der vi selv ikke har kompetansen.
                             </dd>
                         </div>
@@ -203,70 +199,69 @@
                         Noen av de sidene vi har bygd eller v&aelig;rt konsulent til, ser du nedenfor.
                     </p>
 
-                    <a href="./websider.html"
-                        class="flex items-center justify-center w-full px-8 py-3 mx-auto mt-12 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md sm:w-1/4 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                        Les mer om prosessen
+                    <a href="./websider.html">
+                        <button class="btn btn-primary">Les mer om prosessen</button>
                     </a>
                 </div>
 
                 <!-- PORTFOLIO -->
-                <div class="grid w-full grid-cols-1 gap-1 py-16 sm:grid-cols-2 lg:grid-cols-4 z-20">
+                <div class="grid grid-cols-1 gap-4 py-16 sm:grid-cols-2 lg:grid-cols-3 mx-auto">
 
                     <!-- NAFWeb -->
-                    <a href="https://www.nafweb.no/" target="_blank">
-                    <div id="nafweb"
-                        class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
-                        <div>
-                            <img src="images/nafweb.png" alt="Norsk anestesiologisk forening. Portfoliobilde">
-                        </div>
-                        <div class="text-center">
-                            <span class="font-semibold">Norsk anestesiologisk forening</span><br />
-                            <em class="font-light">www.nafweb.no</em>
+                    <div class="card sm:w-48 lg:w-96 bg-base-100 shadow-xl">
+                        <figure><img src="images/nafweb.png" alt="Norsk anestesiologisk forening" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Norsk anestesiologisk forening</h2>
+                            <p>Hjemmeside for Norsk anestesiologisk forening</p>
+                            <div class="card-actions justify-end">
+                                <a href="https://www.nafweb.no/" target="_blank">
+                                    <button class="btn btn-primary">Besøk nettsiden</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    </a>
 
                     <!-- Simulatorsenteret -->
-                    <a href="https://www.simulatorsenteret.no/" target="_blank">
-                    <div id="simulatorsenteret"
-                        class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
-                        <div>
-                            <img src="images/simulatorsenteret.png" alt="Medisinsk Simulatorsenter. Portfoliobilde">
-                        </div>
-                        <div class="text-center">
-                            <span class="font-semibold">Medisinsk Simulatorsenter</span><br />
-                            <em class="font-light">www.simulatorsenteret.no</em>
+                    <div class="card sm:w-48 lg:w-96 bg-base-100 shadow-xl">
+                        <figure><img src="images/simulatorsenteret.png" alt="Medisinsk Simulatorsenter" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Medisinsk Simulatorsenter</h2>
+                            <p>Hjemmeside for Medisinsk Simulatorsenter</p>
+                            <div class="card-actions justify-end">
+                                <a href="https://www.simulatorsenteret.no/" target="_blank">
+                                    <button class="btn btn-primary">Besøk nettsiden</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    </a>
 
                     <!-- Medsimnorge -->
-                    <a href="https://www.medsimnorge.no/" target="_blank">
-                    <div id="medsimnorge"
-                        class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
-                        <div>
-                            <img src="images/medsimnorge.png" alt="MedSimNorge. Portfoliobilde">
-                        </div>
-                        <div class="text-center">
-                            <span class="font-semibold">MedSimNorge</span><br />
-                            <em class="font-light">www.medsimnorge.no</em>
+                    <div class="card sm:w-48 lg:w-96 bg-base-100 shadow-xl">
+                        <figure><img src="images/medsimnorge.png" alt="MedSimNorge" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">MedSimNorge</h2>
+                            <p>Hjemmeside for MedSimNorge</p>
+                            <div class="card-actions justify-end">
+                                <a href="https://www.medsimnorge.no/" target="_blank">
+                                    <button class="btn btn-primary">Besøk nettsiden</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    </a>
 
                     <!-- Spelet -->
-                    <a href="https://www.spelet.no/" target="_blank">
-                    <div id="spelet"
-                        class="w-full p-4 mx-2 bg-white border border-gray-200 rounded shadow hover:shadow-lg">
-                        <div>
-                            <img src="images/spelet.png" alt="Spelet om Heilag Olav. Portfoliobilde">
-                        </div>
-                        <div class="text-center">
-                            <span class="font-semibold">Spelet om Heilag Olav (frivillige)</span><br />
-                            <em class="font-light">www.spelet.no</em>
+                    <div class="card sm:w-48 lg:w-96 bg-base-100 shadow-xl">
+                        <figure><img src="images/spelet.png" alt="Spelet om Heilag Olav" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Spelet om Heilag Olav</h2>
+                            <p>Hjemmeside for frivillige i Spelet om Heilag Olav</p>
+                            <div class="card-actions justify-end">
+                                <a href="https://www.spelet.no/" target="_blank">
+                                    <button class="btn btn-primary">Besøk nettsiden</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    </a>
 
                 </div>
             </div>
@@ -334,35 +329,36 @@
                     </p>
                     <p class="max-w-3xl my-4 text-xl text-gray-500 lg:mx-auto">
                         V&aring;re priser avhenger av hva du &oslash;nsker &aring; gj&oslash;re. Vi har noen standard priser
-                        for enkeltelementer, men for de fleste oppdragene v&aring;re avtaler vi individuelle priser for den
+                        for enkle oppsett, men for de fleste oppdragene v&aring;re avtaler vi individuelle priser for den
                         enkelte kunden.
                     </p>
                 </div>
 
-                <!-- E-læring pris -->
-                <div class="w-full my-8 border border-gray-300 shadow">
-                    <h2 class="pt-4 pl-4 text-xl font-medium">E-l&aelig;ring p&aring; Kontorportalen</h2>
-                    <p class="py-4 pl-4">
-                        Selve lagringsplass for ditt e-l&aelig;ringssystem hos Kontorportalen koster <em
-                            class="font-semibold">kun kr 80,- pr mnd</em>!
-                        I tillegg kommer oppsett av l&aelig;ringssystemet hvis dere &oslash;nsker det, vanligvis ligger
-                        dette mellom kr 5000,- og kr 10000,-.
-                        Dersom du velger lagringsplass hos oss, 
-                        får du <strong class="font-semibold">15% rabatt</strong> p&aring; oppsett av e-l&aelig;ringssystem.
-                    </p>
-                </div>
+                <div class="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 grid grid-cols-2 gap-4">
+                    <!-- E-læring pris -->
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title">E-læring</h2>
+                            <p>Selve lagringsplass for ditt e-l&aelig;ringssystem koster <em class="font-semibold">kun kr 100,- pr mnd (ekskl mva)</em>!
+                            I tillegg kommer oppsett av l&aelig;ringssystemet hvis dere &oslash;nsker det, vanligvis ligger dette mellom kr 5000,- og kr 10000,-.
+                            Dersom du velger lagringsplass hos oss, får du <strong class="font-semibold">15% rabatt</strong> p&aring; oppsett av e-l&aelig;ringssystem.</p>
+                        </div>
+                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                    </div>
 
-                <!-- Webhosting pris -->
-                <div class="w-full my-8 border border-gray-300 shadow">
-                    <h2 class="pt-4 pl-4 text-xl font-medium">Webhotell</h2>
-                    <p class="py-4 pl-4">
-                        Vi s&oslash;rger for lagringsplass, e-postadresser og domenenavn for deg, alt til en lav,
-                        m&aring;nedlig pris. 
-                        NB! Ved prissamenlikning med andre, s&aring; er vanligvis domenenavn ikke med i prisen!
-                        Et webhotell med 5 Gb lagringsplass, 20 epostadresser og norsk eller utenlandsk domenenavn inkludert
-                        (.no, .com, .net og .org) koster <em class="font-semibold">kun kr 100,- pr mnd</em>.
-                        I tillegg kommer en engangs oppstartkostnad p&aring; kr 1000,-
-                    </p>
+
+                    <!-- Webhosting pris -->
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title">Webhotell</h2>
+                            <p>Vi s&oslash;rger for lagringsplass, e-postadresser og domenenavn for deg, alt til en lav, m&aring;nedlig pris. 
+                                NB! Ved prissamenlikning med andre, s&aring; er vanligvis domenenavn ikke med i prisen!
+                                Et webhotell med 5 Gb lagringsplass, 20 epostadresser og norsk eller utenlandsk domenenavn inkludert
+                                (.no, .com, .net og .org) koster <em class="font-semibold">kun kr 100,- pr mnd</em> (ekskl mva).
+                                I tillegg kommer en engangs oppstartkostnad p&aring; kr 1000,-</p>
+                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -427,28 +423,36 @@
                             <form class="flex flex-col justify-center p-6"
                                 action="https://formsubmit.co/2ac060a099e8979ac0f7824ff6e01430" method="POST">
                                 <div class="flex flex-col">
-                                    <label for="name">Fullt navn</label>
-                                    <input type="text" name="name" id="name" placeholder="Fullt navn"
-                                        class="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none">
+                                    <div class="form-control">
+                                        <label class="label" for="name">
+                                            <span class="label-text">Fullt navn</span>
+                                        </label>
+                                        <input type="text" name="name" id="name" placeholder="Fullt navn"
+                                        class="input input-bordered w-full max-w-xs focus:border-indigo-500 focus:outline-none">
+                                    </div>
                                 </div>
 
                                 <div class="flex flex-col mt-2">
-                                    <label for="email">E-postadresse</label>
-                                    <input type="email" name="email" id="email" placeholder="E-postadresse"
-                                        class="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none">
+                                    <div class="form-control">
+                                        <label class="label" for="email">
+                                            <span class="label-text">E-postadresse</span>
+                                        </label>
+                                        <input type="email" name="email" id="email" placeholder="E-postadresse"
+                                        class="input input-bordered w-full max-w-xs focus:border-indigo-500 focus:outline-none">
+                                    </div>
                                 </div>
 
                                 <div class="flex flex-col mt-2">
-                                    <label for="message">Din melding</label>
-                                    <textarea name="message" id="message"
-                                        class="px-3 py-3 mt-2 font-semibold text-gray-800 bg-white border border-gray-400 rounded-lg w-100 h-40 dark:bg-gray-800 dark:border-gray-700 focus:border-indigo-500 focus:outline-none">
-                                    </textarea>
+                                    <div class="form-control">
+                                        <label class="label" for="message">
+                                            <span class="label-text">Din melding</span>
+                                        </label>
+                                        <textarea name="message" id="message" placeholder="Din melding"
+                                        class="textarea w-full max-w-xs focus:border-indigo-500 focus:outline-none"></textarea>
+                                    </div>
                                 </div>
 
-                                <button type="submit"
-                                    class="px-6 py-3 mt-3 font-bold text-white transition duration-300 ease-in-out bg-indigo-600 rounded-lg md:w-40 hover:bg-blue-dark hover:bg-indigo-500">
-                                    Send melding
-                                </button>
+                                <button type="submit" class="btn btn-primary">Send melding</button>
                             </form>
                         </div>
                     </div>
@@ -524,7 +528,7 @@
                     id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <span class="block my-3 text-gray-300">Abonner p&aring; v&aring;rt nyhetsbrev</span>
-                        <input type="email" value="" name="EMAIL" class="h-8 px-3 rounded" id="mce-EMAIL"
+                        <input type="email" value="" name="EMAIL" class="input" id="mce-EMAIL"
                             placeholder="E-postadresse" required>
                         <div class="absolute" style="left: -5000px;" aria-hidden="true">
                             <input type="text" name="b_106d85df43b77255aa0d8619d_bb36e1b3a0" tabindex="-1" value="">
