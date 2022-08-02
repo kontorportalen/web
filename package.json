@@ -1,21 +1,22 @@
 {
   "name": "Tailwindcss",
-  "version": "1.0.0",
+  "version": "3.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build -i ./src/css/tailwind.css -o ./public/css/kp_styles.css"
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/kp_styles.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookieconsent": "^3.1.1",
     "daisyui": "^2.19.0",
     "fast-glob": "^3.2.11"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.13",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.1.7"
   }
 }
