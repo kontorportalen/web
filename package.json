@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/kp_styles.css --watch"
+    "build": "npx tailwindcss -i src/css/tailwind.css -o public/css/kp_styles.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +15,8 @@
     "fast-glob": "^3.2.11"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.13",
-    "tailwindcss": "^3.1.7"
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
   }
 }
