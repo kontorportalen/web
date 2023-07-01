@@ -11,53 +11,45 @@
     <title>Kontorportalen</title>
 </head>
 
-<body>
+<body class="text-lg">
 
-    <header class="top-0 w-full text-gray-600 bg-white shadow-md">
-
-            <nav class="bg-white max-w-6xl content-center mx-auto">
-                <div class="flex justify-between">
-                    <div class="logo">
-                        <!-- Website Logo -->
-                        <a href="index.html" class="flex items-center py-4 px-2" aria-label="Kontorportalen hjem">
-                            <img src="images/logo_kp_SvartHvit.png" alt="" class="h-8 w-48 mr-2">
-                        </a>
-                    </div>
-
-                    <!-- Primary Navbar items -->
-                    <div class="hidden md:flex items-center space-x-1" role="list">
-                        <a href="index.html" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold ">Hjem</a>
-                        <a href="websider.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Websider</a>
-                        <a href="index.html#events" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Billettformidling</a>
-                        <a href="index.html#elaring" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">E-læring</a>
-                    </div>
+<!-- Component: Navbar -->
+<header class="relative z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
+    <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+        <nav aria-label="Main navigation" class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
+            <!-- Logo -->
+            <a id="Kontorportalen" aria-label="Kontorportalen logo" aria-current="page" class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1" href="index.html">
+                <img src="images/logo_kp_SvartHvit.png" alt="" class="h-8 w-48 mr-2">
+            </a>
+            <!-- Mobile trigger -->
+            <button class="relative self-center order-10 visible block w-10 h-10 opacity-100 lg:hidden" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <span aria-hidden="true" class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
+                    <span aria-hidden="true" class="absolute block h-0.5 w-6 transform rounded-full bg-slate-900 transition duration-300"></span>
+                    <span aria-hidden="true" class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
                 </div>
+            </button>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="outline-none mobile-menu-button">
-                        <svg class="w-6 h-6 text-gray-500 hover:text-blue-500"
-                            x-show="!showMenu" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile menu -->
-            <div class="hidden mobile-menu">
-                <ul class="">
-                    <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold">Hjem</a></li>
-                    <li><a href="websider.html" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Websider</a></li>
-                    <li><a href="index.html#events" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Billettformidling</a></li>
-                    <li><a href="index.html#elaring" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">E-læring</a></li>
-                </ul>
-            </div>
+            <!-- Navigation links -->
+            <ul role="menubar" aria-label="Select page" class="invisible absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-28 font-medium opacity-0 transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100">
+                <li role="none" class="flex items-stretch">
+                    <a role="menuitem" aria-current="page" aria-haspopup="false" tabindex="0" class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:bg-blue-50 focus:outline-none focus-visible:outline-none lg:px-8" href="index.html"> <span>Hjem</span></a>
+                </li>
+                <li role="none" class="flex items-stretch">
+                    <a role="menuitem" aria-haspopup="false" tabindex="0" class="flex items-center gap-2 py-4 transition-colors duration-300 text-blue-500 hover:text-blue-600 focus:bg-blue-50 focus:outline-none focus-visible:outline-none lg:px-8" href="javascript:void(0)"> <span>Features</span> </a>
+                </li>
+                <li role="none" class="flex items-stretch">
+                    <a role="menuitem" aria-haspopup="false" tabindex="0" class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:bg-blue-50 focus:outline-none focus-visible:outline-none lg:px-8" href="javascript:void(0)"> <span>Pricing</span> </a>
+                </li>
+                <li role="none" class="flex items-stretch">
+                    <a role="menuitem" aria-haspopup="false" tabindex="0" class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-blue-500 focus:bg-blue-50 focus:outline-none focus-visible:outline-none lg:px-8" href="javascript:void(0)"> <span>About</span> </a>
+                </li>
+            </ul>
         </nav>
-    </header>
+    </div>
+</header>
+<!-- End Basic Navbar-->
+
 
     <main>
         <section class="grid grid-cols-1 md:grid-cols-2 mt-2 mb-10 bg-white md:min-h-screen" id="hero">
@@ -201,7 +193,9 @@
                     </p>
 
                     <a href="./websider.html">
-                        <button class="btn btn-primary">Les mer om prosessen</button>
+                    <button class="inline-flex items-center justify-center h-10 gap-2 px-5 font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 disabled:cursor-not-allowed disabled:border-blue-300 disabled:bg-blue-300 disabled:shadow-none">
+                        <span>Les mer om prosessen</span>
+                    </button>
                     </a>
                 </div>
 
@@ -336,20 +330,52 @@
                 </div>
 
                 <div class="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8 grid grid-cols-2 gap-4">
-                    <!-- E-læring pris -->
-                    <div class="card w-96 bg-base-100 shadow-xl">
-                        <div class="card-body">
-                            <h2 class="card-title">E-læring</h2>
-                            <p>Selve lagringsplass for ditt e-l&aelig;ringssystem koster <em class="font-semibold">kun kr 100,- pr mnd</em> (eks mva)!
-                            I tillegg kommer oppsett av l&aelig;ringssystemet hvis dere &oslash;nsker det, vanligvis ligger dette mellom kr 5000,- og kr 10000,-.
-                            Dersom du velger lagringsplass hos oss, får du <strong class="font-semibold">15% rabatt</strong> p&aring; oppsett av e-l&aelig;ringssystem.</p>
-                        </div>
-                        <figure class="max-h-16"><img src="images/elearning.jpg" alt="Student med PC" /></figure>
-                    </div>
+
+
+<!-- Component: Blog card with action button -->
+<div class="overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+    <!-- Image -->
+    <figure><img src="images/hotel.jpg" alt="Illustrasjonsbilde" class="aspect-video w-full max-h-48" /></figure>
+    <!-- Body-->
+    <div class="p-6">
+        <header class="mb-4">
+            <div>
+                <h3 class="text-xl font-bold text-slate-700">Webhotell</h3>
+            </div>
+        </header>
+        <p>Vi s&oslash;rger for lagringsplass, e-postadresser og domenenavn for deg. 
+            NB! Ved prissamenlikning med andre, s&aring; har vi domenenavn inkludert i prisen!
+            Webhotell med 5 Gb lagringsplass, 20 epostadresser og domenenavn
+            (.no, .com, .net og .org) koster <em class="font-semibold">kun kr 100,- pr mnd</em> (eks mva).
+            I tillegg kommer en engangs oppstartkostnad p&aring; kr 1000,-</p>
+    </div>
+  </div>
+
+<div class="overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+    <!-- Image -->
+    <figure><img src="images/elearning.jpg" alt="Illustrasjonsbilde" class="aspect-video w-full max-h-48" /></figure>
+    <!-- Body-->
+    <div class="p-6">
+        <header class="mb-4">
+            <div>
+                <h3 class="text-xl font-bold text-slate-700">E-læring</h3>
+            </div>
+        </header>
+        <p>Prisen for elæringssystem er todelt:</p>
+        <ul class="list-disc">
+            <li>Lagringsplass koster <em class="font-semibold">kun kr 100,- pr mnd</em> (eks mva)</li>
+            <li>Oppsett av l&aelig;ringssystemet ligger vanligvis mellom kr 5000,- og kr 10000,-.</li>
+        </ul>
+        <p>Dersom du velger lagringsplass hos oss, får du <strong class="font-semibold">15% rabatt</strong> p&aring; oppsett av e-l&aelig;ringssystem.</p>
+    </div>
+  </div>
+
+
 
 
                     <!-- Webhosting pris -->
                     <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="max-h-32"><img src="images/hotel.jpg" alt="Hoteller som snurrer rundt" /></figure>
                         <div class="card-body">
                             <h2 class="card-title">Webhotell</h2>
                             <p>Vi s&oslash;rger for lagringsplass, e-postadresser og domenenavn for deg. 
@@ -358,7 +384,6 @@
                                 (.no, .com, .net og .org) koster <em class="font-semibold">kun kr 100,- pr mnd</em> (eks mva).
                                 I tillegg kommer en engangs oppstartkostnad p&aring; kr 1000,-</p>
                         </div>
-                        <figure class="max-h-16"><img src="images/hotel.jpg" alt="Hoteller som snurrer rundt" /></figure>
                     </div>
 
                 </div>
@@ -484,6 +509,9 @@
                     class="block my-3 text-sm font-medium text-gray-300 duration-700 hover:text-gray-100">
                     Kontakt oss
                 </a>
+
+                <div id="wcb" class="carbonbadge wcb-d"></div>
+                
             </div>
 
             <!-- Kolonne 2 -->
@@ -548,12 +576,13 @@
             <div class="pt-2">
                 <div
                     class="flex flex-col max-w-6xl px-3 pt-5 pb-5 m-auto text-sm text-gray-400 border-t border-gray-500 md:flex-row">
-                    <span class="mt-2">&copy; Kontorportalen 2022. All Rights Reserved.</span>
+                    <span class="mt-2">&copy; Kontorportalen 2023. All Rights Reserved.</span>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     <script>
         const btn = document.querySelector("button.mobile-menu-button");
         const menu = document.querySelector(".mobile-menu");

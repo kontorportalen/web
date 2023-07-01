@@ -2,7 +2,7 @@
   "name": "tailwindcss",
   "version": "3.3.2",
   "description": "",
-  "main": "index.html",
+  "main": "./public/index.html",
   "scripts": {
     "build": "npx tailwind -i ./src/css/tailwind.css -o ./public/css/kp_styles.css --watch",
     "build-p": "postcss ./src/css/tailwind.css -o ./public/css/kp_styles.css --watch"
